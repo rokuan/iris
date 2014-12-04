@@ -1,0 +1,174 @@
+npc "Bah oui" {
+	main :	
+		Boolean b = false;
+		Int i = 3;
+		String s = " toi tu es le ";
+		String eme = " eme";
+		String test = "test";
+		String tour;
+		
+		setbackground cover;
+		set $variable_test, 3+7*4;
+		
+		i = 2+5;
+		
+		b = true || 2+1 >= 3;
+		
+		open;
+		
+		i = 1 + 3;
+		
+		if($variable_test == 31){
+			msg "Le resultat est bien 31";
+		}
+		else{
+			msg "Mauvaise reponse malheureusement !";
+		}
+		
+		msg "" + i;
+		
+		menu("Oui bien sur", "Non merci ca ira", "Pas de probleme mais tu penses pas que ca va etre un peu long tout ca surtout si on parle pour ne rien dire ?",
+		"Of course", "Si", "Ah oue", "Non mais t'as craque fwew",
+		"Vas-y la !", "How about no", "Hey regarde la bas y'a ... rien :lol:", "Challenge Denied"){
+		case 0:
+		case 2:
+			msg "Bonjour";
+			break;
+			
+		case 1:
+			msg "Bah casse toi pauv' con";
+			break;	
+		}
+		
+		for(i=1; i<=9; i+=2){
+			tour += "A ton tour Mr." + i + " ";
+		}
+		
+		msg tour;
+		
+		while(i<=3){
+			msg "Personne dans le " + i;
+			i++;
+		}
+		
+		switchcharacter gilgamesh;
+		show gilgamesh["base"], left;
+		
+		switch(i){
+		case 1:
+		case 2:
+		case 3:
+			msg "i vaut 1 ou 2 ou bien 3";
+			break;
+			
+		case 4:
+			msg "i vaut 4";
+			break;
+			
+		default:
+			msg "cas par defaut";
+			break;
+		}
+		
+		switch(test+i){
+		case "test1":
+			msg "Test 1 of course";
+			break;
+			
+		case "test3":
+			msg "C'est le bon !";
+			break;
+			
+		case "teste-moi":
+			msg "Mais qui etes-vous ?";
+			break;
+			
+		default:
+			msg "Chelou la louche";
+			break;
+		}
+		
+		if(b && false){
+			next;
+			msg "Hello " + s + i + eme;
+			msg "Moui";
+			next;
+			msg "Tout a fait d'accord";
+			msg "avec toi";
+		}
+		elseif(true || false){
+			next;
+			play emiya_theme;
+			switchcharacter archer;
+			show archer["base"], right;
+			msg "Je suis rentre dans le else if fwew";
+			next;
+			cleanforeground;
+			show caster["base"], left;
+			show saber["base"], right;
+			play kizuna;
+			switchcharacter saber;
+			msg "Et j'ai appuye sur Next laule.";
+			msg "Dis-moi en un peu plus sur tes gouts culinaires.";
+			msg "Qu'aimes-tu qui commence par la lettre 'c' ?";
+			next;
+			input tour;
+			
+			switch(tour){
+			case "caca":
+				msg "\"MinD, t'aimes le caca ?\"";
+				break;
+				
+			case "coco":
+				msg "C'est chaud les cocos !";
+				break;
+			
+			case "chocolat":
+			case "cacao":
+				msg "Chaaauuuuud cacao, chaud chaud chaud CHOCOLAT !";
+				break;
+				
+			default:
+				msg "Aucune imagination ... C'est decevant";
+				break;
+			}
+		}
+		else{
+			msg "Je suis rentre dans le else";
+		}
+		
+		next;
+		
+		msg "Et quel film aimes-tu ?";
+		
+		menu("Hello", "Avatar", "Lol"){
+		case 0:
+			msg "Je connais pas ce film";
+			break;
+			
+		case 1:
+			msg "Okay";
+			break;
+			
+		case 2:
+			msg "Qu'est-ce qui te fait rire ?";
+			break;
+		}
+		
+		close;
+		stop;
+		cleanbackground;
+		cleanforeground;
+		
+		goto "Bah oui"::test_goto;
+		
+	test_goto:
+		setbackground card_02;
+		switchcharacter rin;
+		show rin["base"], center;
+		open;
+		msg "Test du goto reussi";
+		close;
+		cleanforeground;
+		cleanbackground;
+}

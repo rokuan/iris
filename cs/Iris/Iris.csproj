@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9AC56D94-3BE8-48AA-B092-8A3321A5DDB2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Iris</RootNamespace>
+    <AssemblyName>Iris</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Data\IrisBackground.cs" />
+    <Compile Include="Data\IrisCharacter.cs" />
+    <Compile Include="Data\IrisData.cs" />
+    <Compile Include="Data\IrisImage.cs" />
+    <Compile Include="Data\IrisSound.cs" />
+    <Compile Include="Data\ScriptLoader.cs" />
+    <Compile Include="ExpressionElement\CaseExpression.cs" />
+    <Compile Include="ExpressionElement\DefaultExpression.cs" />
+    <Compile Include="ExpressionElement\DoWhileExpression.cs" />
+    <Compile Include="ExpressionElement\ElseExpression.cs" />
+    <Compile Include="ExpressionElement\ElseIfExpression.cs" />
+    <Compile Include="ExpressionElement\Expression.cs" />
+    <Compile Include="ExpressionElement\ForExpression.cs" />
+    <Compile Include="ExpressionElement\IBlockExpression.cs" />
+    <Compile Include="ExpressionElement\IfExpression.cs" />
+    <Compile Include="ExpressionElement\Instruction\AssignExpression.cs" />
+    <Compile Include="ExpressionElement\Instruction\CleanBackgroundInstruction.cs" />
+    <Compile Include="ExpressionElement\Instruction\CleanForegroundInstruction.cs" />
+    <Compile Include="ExpressionElement\Instruction\CloseMsgDialogInstruction.cs" />
+    <Compile Include="ExpressionElement\Instruction\EndInstruction.cs" />
+    <Compile Include="ExpressionElement\Instruction\GotoInstruction.cs" />
+    <Compile Include="ExpressionElement\Instruction\IInstruction.cs" />
+    <Compile Include="ExpressionElement\Instruction\InputInstruction.cs" />
+    <Compile Include="ExpressionElement\Instruction\InstructionExpression.cs" />
+    <Compile Include="ExpressionElement\Instruction\LabelPathExpression.cs" />
+    <Compile Include="ExpressionElement\Instruction\MenuInstruction.cs" />
+    <Compile Include="ExpressionElement\Instruction\MsgDisplayInstruction.cs" />
+    <Compile Include="ExpressionElement\Instruction\NextMsgDialogInstruction.cs" />
+    <Compile Include="ExpressionElement\Instruction\NpcMemberExpression.cs" />
+    <Compile Include="ExpressionElement\Instruction\OpenMsgDialogInstruction.cs" />
+    <Compile Include="ExpressionElement\Instruction\PlayMediaInstruction.cs" />
+    <Compile Include="ExpressionElement\Instruction\RemoveCharacter.cs" />
+    <Compile Include="ExpressionElement\Instruction\SetBackgroundInstruction.cs" />
+    <Compile Include="ExpressionElement\Instruction\SetVariableInstruction.cs" />
+    <Compile Include="ExpressionElement\Instruction\ShowImageInstruction.cs" />
+    <Compile Include="ExpressionElement\Instruction\StopMediaInstruction.cs" />
+    <Compile Include="ExpressionElement\Instruction\SwitchCharacterInstruction.cs" />
+    <Compile Include="ExpressionElement\Instruction\VariableUpdate.cs" />
+    <Compile Include="ExpressionElement\LabelExpression.cs" />
+    <Compile Include="ExpressionElement\SequenceExpression.cs" />
+    <Compile Include="ExpressionElement\SwitchCaseExpression.cs" />
+    <Compile Include="ExpressionElement\SwitchExpression.cs" />
+    <Compile Include="ExpressionElement\Instruction\ValueExpression.cs" />
+    <Compile Include="ExpressionElement\WhileExpression.cs" />
+    <Compile Include="Framework\BackgroundPanel.xaml.cs">
+      <DependentUpon>BackgroundPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Framework\GameScreen.xaml.cs">
+      <DependentUpon>GameScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Framework\InputBox.xaml.cs">
+      <DependentUpon>InputBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Framework\MenuBox.xaml.cs">
+      <DependentUpon>MenuBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Framework\MessageBox.xaml.cs">
+      <DependentUpon>MessageBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IrisPrinter\Printer.cs" />
+    <Compile Include="ObjectType.cs" />
+    <Compile Include="ObjectTypeList.cs" />
+    <Compile Include="ParserUtils\ContentParser.cs" />
+    <Compile Include="ParserUtils\LexerParser.cs" />
+    <Compile Include="ParserUtils\LexParsa.cs" />
+    <Compile Include="ParserUtils\LexParseException\BaseException.cs" />
+    <Compile Include="ParserUtils\LexParseException\CaseException.cs" />
+    <Compile Include="ParserUtils\LexParseException\DefaultCaseException.cs" />
+    <Compile Include="ParserUtils\LexParseException\EmptyExpression.cs" />
+    <Compile Include="ParserUtils\LexParseException\IncompatibleTypesException.cs" />
+    <Compile Include="ParserUtils\LexParseException\InvalidLeftTypeOperand.cs" />
+    <Compile Include="ParserUtils\LexParseException\InvalidTypeOperand.cs" />
+    <Compile Include="ParserUtils\LexParseException\InvalidRightTypeOperand.cs" />
+    <Compile Include="ParserUtils\LexParseException\InvalidSequence.cs" />
+    <Compile Include="ParserUtils\LexParseException\MissingCharacterName.cs" />
+    <Compile Include="ParserUtils\LexParseException\NewLineInStringException.cs" />
+    <Compile Include="ParserUtils\LexParseException\SyntaxError.cs" />
+    <Compile Include="ParserUtils\LexParseException\UndefinedException.cs" />
+    <Compile Include="ParserUtils\LexParseException\UnfinishedCommentary.cs" />
+    <Compile Include="ParserUtils\LexParseException\UnfinishedString.cs" />
+    <Compile Include="ParserUtils\LexParseException\UnknownField.cs" />
+    <Compile Include="ParserUtils\ScriptParser.cs" />
+    <Compile Include="ParserUtils\Token.cs" />
+    <Compile Include="ScriptElements\ClassStructureElement\ClassStructure.cs" />
+    <Compile Include="ScriptElements\ClassStructureElement\ClassConstructor.cs" />
+    <Compile Include="ScriptElements\ConstantStructure.cs" />
+    <Compile Include="ScriptElements\FunctionStructureElement\FunctionDeclaration.cs" />
+    <Compile Include="ScriptElements\FunctionStructureElement\FunctionDefinition.cs" />
+    <Compile Include="ScriptElements\FunctionStructureElement\FunctionStructure.cs" />
+    <Compile Include="SimpleExpressionElement\MethodParameter.cs" />
+    <Compile Include="ScriptElements\FunctionStructureElement\MethodSignature.cs" />
+    <Compile Include="ScriptElements\IrisScript.cs" />
+    <Compile Include="ScriptElements\NpcStructure.cs" />
+    <Compile Include="ScriptElements\ScriptElement.cs" />
+    <Compile Include="ScriptEval.cs" />
+    <Compile Include="SimpleExpressionElement\BinaryOperatorExpression.cs" />
+    <Compile Include="SimpleExpressionElement\CharacterVariableExpression.cs" />
+    <Compile Include="SimpleExpressionElement\ConstantExpression.cs" />
+    <Compile Include="SimpleExpressionElement\LiteralExpression.cs" />
+    <Compile Include="SimpleExpressionElement\MemberAccessExpression.cs" />
+    <Compile Include="SimpleExpressionElement\MethodCallExpression.cs" />
+    <Compile Include="SimpleExpressionElement\NewInstanceExpression.cs" />
+    <Compile Include="SimpleExpressionElement\NullExpression.cs" />
+    <Compile Include="SimpleExpressionElement\ObjectArrayExpression.cs" />
+    <Compile Include="SimpleExpressionElement\ObjectExpression.cs" />
+    <Compile Include="SimpleExpressionElement\PathExpression.cs" />
+    <Compile Include="SimpleExpressionElement\SimpleExpression.cs" />
+    <Compile Include="SimpleExpressionElement\SubMemberExpression.cs" />
+    <Compile Include="SimpleExpressionElement\SubSimpleExpression.cs" />
+    <Compile Include="SimpleExpressionElement\UnaryOperatorExpression.cs" />
+    <Compile Include="SimpleExpressionElement\VariableExpression.cs" />
+    <Page Include="Framework\BackgroundPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Framework\GameScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Framework\InputBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Framework\MenuBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Framework\MessageBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

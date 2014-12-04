@@ -1,0 +1,8 @@
+npc "Lol" {
+
+main:
+	String s;
+	Int k = 2+2;
+	
+	s += k;
+}
