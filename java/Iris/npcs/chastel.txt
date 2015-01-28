@@ -1,0 +1,26 @@
+npc "Chastel" new_leona {
+main:
+    open;
+    setbgd new_leona_hall;
+    show chastel["base"], left;
+    show gabrielle["base"], right;
+
+    switchchar chastel;
+    msg "Gabrielle, sais-tu ou se trouve Ethan ?";
+    menu("Oui", "Non"){
+    case 0:
+        next;
+        switchchar gabrielle;
+        msg "Il est alle s'entrainer a  manier l'epee au sous-soul";
+        break;
+    case 1:
+        next;
+        msg "Tres bien, dis-lui que j'ai besoin de lui parler si jamais tu l'apercois. Je l'attendrai dans la Cour";
+        break;
+    }
+    
+    close;        
+	removechar;
+    cleanfgd;
+    cleanbgd;        
+}

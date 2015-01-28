@@ -1,0 +1,13 @@
+npc "Gabrielle" new_leona {
+main:
+
+training:
+    open;
+    switchcharacter gabrielle;
+    show gabrielle["base"], left;
+    msg "Ethan ?";
+    next;
+    show ethan["base"], right;
+    msg "Gaby, qu'est-ce que tu fais là ?";
+    close;
+}

@@ -1,0 +1,34 @@
+character hero {
+    name = "Ethan";
+    images = {
+        base = "ethan.png";
+    };
+}
+
+character chastel {
+    name = "Chastel";
+    images = {
+        base = "chastel.png";
+    };
+}
+
+character brother {
+    name = "Swaggy";
+    images = {
+        base = "swaggy.png";
+    };
+}
+
+character gabrielle {
+    name = "Gabrielle";
+    images = {
+        base = "gabrielle.png";
+    };
+}
+
+character hanssen {
+    name = "Hanssen";
+    images = {
+        base = "hanssen.png";
+    };
+}

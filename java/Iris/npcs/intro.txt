@@ -1,0 +1,4 @@
+npc "Introduction" nowhere {
+main:
+
+}

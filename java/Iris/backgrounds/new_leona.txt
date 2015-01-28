@@ -1,0 +1,11 @@
+background new_leona_thrones {
+    source = "salle_du_trone.jpg";
+}
+
+background new_leona_hall {
+    source = "hall.jpg";
+}
+
+background new_leona_chivalry {
+    source = "cour_chevalier.jpg";
+}

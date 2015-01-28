@@ -1,0 +1,4 @@
+npc "Swaggy" new_leona {
+main:
+
+}

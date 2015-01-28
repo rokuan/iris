@@ -1,0 +1,6 @@
+﻿package com.rokuan.iris.script;
+
+public class FunctionDefinition extends FunctionStructure
+{
+
+}

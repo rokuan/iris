@@ -1,0 +1,65 @@
+/* CHARACTERS */
+
+character saber {
+	name = "Saber";
+	
+	images = {
+		base = "c3_big.png";
+	};
+}
+
+character archer {
+	name = "Archer";
+	
+	images = {
+		base = "c4_big.png";
+	};
+}
+
+character caster {
+	name = "Caster";
+	
+	images = {
+		base = "c5_big.png";
+	};
+}
+
+character gilgamesh {
+	name = "Gilgamesh";
+	
+	images = {
+		base = "c6_big.png";
+	};
+}
+
+character rin {
+	name = "Rin";
+	
+	images = {
+		base = "c9_big.png";
+	};
+}
+
+/* BACKGROUNDS */
+
+background cover {
+	source = "Case Cover Back Inner.jpg";
+}
+
+background card_02 {
+	source = "Card 02.jpg";
+}
+
+/* SOUNDS */
+
+/*sound unlimited_blade_works {
+	source = "blabla.wav";
+}*/
+
+sound emiya_theme {
+	source = "23 - Emiya -Kenji Kawai ver.-.mp3";
+}
+
+sound kizuna {
+	source = "34 - Kizuna.mp3";
+}

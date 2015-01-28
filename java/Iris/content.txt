@@ -1,0 +1,2 @@
+characters/royal_family_new_leona.txt
+backgrounds/new_leona.txt
